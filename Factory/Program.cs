@@ -4,7 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Factory.Models;
 
 namespace Factory
-{
+
+ {
   class Program
   {
     static void Main(string[] args)

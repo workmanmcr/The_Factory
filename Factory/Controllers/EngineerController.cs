@@ -18,9 +18,9 @@ namespace Factory.Controllers
 
         public ActionResult Index()
         {
-            List<Engineer> model = _db.Engineers
-                .Include(engineer => engineer.Machine)
-                .ToList();
+            List<Engineer> model = _db.Engineers;
+                // .Include(engineer => engineer.Machine)
+                // .ToList();
             return View(model);
         }
 
@@ -33,10 +33,10 @@ namespace Factory.Controllers
         [HttpPost]
         public ActionResult Create(Engineer engineer)
         {
-            if (engineer.MachineId == 0)
-            {
-                return RedirectToAction("Create");
-            }
+            // if (engineer.MachineId == 0)
+            // {
+            //     return RedirectToAction("Create");
+            // }
             _db.Engineers.Add(engineer);
             _db.SaveChanges();
             return RedirectToAction("Index");
@@ -50,34 +50,36 @@ namespace Factory.Controllers
             return View(thisEngineer);
         }
 
-        public ActionResult Edit(int id)
-        {
-            Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
-            ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
-            return View(thisEngineer);
-        }
+        
 
-        [HttpPost]
-        public ActionResult Edit(Engineer engineer)
-        {
-            _db.Engineers.Update(engineer);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        // public ActionResult Edit(int id)
+        // {
+        //     Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+        //     ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+        //     return View(thisEngineer);
+        // }
 
-        public ActionResult Delete(int id)
-        {
-            Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
-            return View(thisEngineer);
-        }
+        // [HttpPost]
+        // public ActionResult Edit(Engineer engineer)
+        // {
+        //     _db.Engineers.Update(engineer);
+        //     _db.SaveChanges();
+        //     return RedirectToAction("Index");
+        // }
 
-        [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
-            _db.Engineers.Remove(thisEngineer);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        // public ActionResult Delete(int id)
+        // {
+        //     Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+        //     return View(thisEngineer);
+        // }
+
+        // [HttpPost, ActionName("Delete")]
+        // public ActionResult DeleteConfirmed(int id)
+        // {
+        //     Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+        //     _db.Engineers.Remove(thisEngineer);
+        //     _db.SaveChanges();
+        //     return RedirectToAction("Index");
+        // }
     }
 }
