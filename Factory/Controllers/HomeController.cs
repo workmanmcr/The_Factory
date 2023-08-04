@@ -6,11 +6,10 @@ namespace Factory.Controllers;
 
 public class HomeController : Controller
 {
-  
 
-    public IActionResult Index()
+    [HttpGet("/")]
+    public ActionResult Index()
     {
         return View();
     }
 }
-   
