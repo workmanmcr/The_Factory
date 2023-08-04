@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Factory.Models;
@@ -18,25 +17,18 @@ namespace Factory.Controllers
 
         public ActionResult Index()
         {
-            List<Engineer> model = _db.Engineers
-                                        .Include(engineer => engineer.Machine)
-                                        .ToList();
+            List<Engineer> model = _db.Engineers.ToList();
             return View(model);
         }
 
         public ActionResult Create()
         {
-            ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
             return View();
         }
 
         [HttpPost]
         public ActionResult Create(Engineer engineer)
         {
-            if (engineer.MachineId == 0)
-            {
-                return RedirectToAction("Create");
-            }
             _db.Engineers.Add(engineer);
             _db.SaveChanges();
             return RedirectToAction("Index");
@@ -45,15 +37,14 @@ namespace Factory.Controllers
         public ActionResult Details(int id)
         {
             Engineer thisEngineer = _db.Engineers
-                                            .Include(engineer => engineer.Machine)
-                                            .FirstOrDefault(engineer => engineer.EngineerId == id);
+                                        .Include(engineer => engineer.Machines)
+                                        .FirstOrDefault(engineer => engineer.EngineerId == id);
             return View(thisEngineer);
         }
 
         public ActionResult Edit(int id)
         {
             Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
-            ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
             return View(thisEngineer);
         }
 

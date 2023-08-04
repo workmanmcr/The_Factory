@@ -6,15 +6,17 @@
 
 <h3>Add a machine</h3>
 
+<p><strong>NOTE:</strong> You need to have at least one engineer before you can add a machine!</p>
+<p>Go to @Html.ActionLink("this page", "Create", "Engineers") to create an Engineer.</p>
+
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
-  @Html.LabelFor(model => model.MachineNumber)
-  @Html.TextBoxFor(model => model.MachineNumber)
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description)
 
+  @Html.LabelFor(model => model.Engineer)
+  @Html.DropDownList("EngineerId")
 
-  <input type="submit" value="Create Machine" class="btn btn-primar" />
+  <input type="submit" value="Add new Machine" class="btn btn-default" />
 }
-
-<p>@Html.ActionLink("Back to Machines","Index")</p>
+<p>@Html.ActionLink("Show all machines", "Index")</p>
