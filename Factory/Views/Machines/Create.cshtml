@@ -4,19 +4,18 @@
 
 @model Factory.Models.Machine
 
-<h3>Add a machine</h3>
-
-<p><strong>NOTE:</strong> You need to have at least one engineer before you can add a machine!</p>
-<p>Go to @Html.ActionLink("this page", "Create", "Engineers") to create an Engineer.</p>
-
+<h4>add a new machine</h4>
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Description)
-  @Html.TextBoxFor(model => model.Description)
+  @Html.Label("Machine Name")
+  @Html.TextBoxFor(model => model.MachineName, new { @class = "form-control", required = "required"})
 
-  @Html.LabelFor(model => model.Engineer)
+  <br>
+  <br>
+  @Html.Label("Qualified Engineers")
   @Html.DropDownList("EngineerId")
 
-  <input type="submit" value="Add new Machine" class="btn btn-default" />
+  <br>
+  <br>
+  <input type="submit" value="Complete" class="btn btn-default" required="true" />
 }
-<p>@Html.ActionLink("Show all machines", "Index")</p>

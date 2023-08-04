@@ -1,24 +1,30 @@
 @{
-    Layout = "_Layout";
+  Layout = "_Layout";
 }
 
 @model Factory.Models.Machine
 
-<h2>Edit</h2>
+<h2>edit machine details</h2>
 
-<h4>Edit this Machine: @Html.DisplayFor(model => model.Description)</h4>
+<hr />
+<h4>@Html.DisplayFor(model => model.MachineName)</h4>
+<br>
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.MachineId)
+  @Html.HiddenFor(model => model.MachineId)
+  @Html.Label("Name")
+  @Html.EditorFor(model => model.MachineName, new { @class = "form-control"})
 
-    @Html.LabelFor(model => model.Description)
-    @Html.EditorFor(model => model.Description)
 
-    @Html.LabelFor(model => model.Engineer)
-    @Html.DropDownList("EngineerId")
+  @Html.Label("Qualified Engineer")
+  @Html.DropDownList("EngineerId")
 
-    <input type="submit" value="Save" />
+  <br>
+  <br>
+  <input type="submit" value="Save Changes" required="true" />
 }
 
-<p>@Html.ActionLink("Back to list", "Index",null, new {})</p>
+<ul class="menu-links">
+  <li>@Html.ActionLink("back to machine inventory", "Index")</li>
+</ul>

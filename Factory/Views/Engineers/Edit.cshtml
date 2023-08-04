@@ -1,21 +1,28 @@
-@{
-    Layout = "_Layout";
 }
 
 @model Factory.Models.Engineer
 
-<h2>Edit</h2>
+<h2>edit Engineer details</h2>
 
-<h4>Edit this engineer: @Html.DisplayFor(model => model.Name)</h4>
+<hr />
+<h4>@Html.DisplayFor(model => model.Name)</h4>
+<br>
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.EngineerId)
+  @Html.HiddenFor(model => model.EngineerId)
+  @Html.Label("Name")
+  @Html.EditorFor(model => model.Name, new { @class = "form-control"})
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
 
-    <input type="submit" value="Save" />
+  @Html.Label("Assigned Machine")
+  @Html.DropDownList("MachineId")
+
+  <br>
+  <br>
+  <input type="submit" value="Save Changes" required="true" />
 }
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<ul class="menu-links">
+  <li>@Html.ActionLink("back to employee directory", "Index")</li>
+</ul>
