@@ -3,13 +3,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Factory.Models;
 
-namespace Factory
 
- {
-  class Program
+namespace Factory
+{
+ class Program
   {
     static void Main(string[] args)
     {
+
       WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
       builder.Services.AddControllersWithViews();
