@@ -7,7 +7,6 @@ namespace Factory.Models
  {
     public int EngineerId { get; set; }
     public string Name { get; set; }
-    public Machine Machine { get; set; }
     public List<Machine> Machines { get; set; }
   }
     }
