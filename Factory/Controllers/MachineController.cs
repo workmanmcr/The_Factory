@@ -41,18 +41,20 @@ namespace Factory.Controllers
       return RedirectToAction("Index");
     }
 
-    public ActionResult Details(int id)
-    {
-      Machine thisMachine = _db.Machines
+  public ActionResult Details(int id)
+{
+    var thisMachine = _db.Machines
         .Include(machine => machine.JoinEntities)
-        .ThenInclude(join => join.Machine)
+            .ThenInclude(join => join.Engineer) // Use ThenInclude to include the Engineer entities
         .FirstOrDefault(machine => machine.MachineId == id);
-      return View(thisMachine);
-    }
+
+    return View(thisMachine);
+}
+
 
     public ActionResult Edit(int id)
     {
-      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
+      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
       Machine thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
       return View(thisMachine);
     }
