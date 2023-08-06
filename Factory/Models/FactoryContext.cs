@@ -10,8 +10,6 @@ namespace Factory.Models
 
     public FactoryContext(DbContextOptions options) : base(options) { }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-    }
+
   }
 }
