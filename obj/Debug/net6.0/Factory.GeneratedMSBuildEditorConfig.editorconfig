@@ -1,0 +1,72 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Factory
+build_property.RootNamespace = Factory
+build_property.ProjectDir = C:\Users\INTEL 10700K\Desktop\Factory.solution\Factory\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\INTEL 10700K\Desktop\Factory.solution\Factory
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Engineers/AddMachine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5naW5lZXJzXEFkZE1hY2hpbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Engineers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5naW5lZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Engineers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5naW5lZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Engineers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5naW5lZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Engineers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5naW5lZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Engineers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5naW5lZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Machines/AddEngineer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFjaGluZXNcQWRkRW5naW5lZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Machines/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFjaGluZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Machines/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFjaGluZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Machines/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFjaGluZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Machines/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFjaGluZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Machines/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFjaGluZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/INTEL 10700K/Desktop/Factory.solution/Factory/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-a7b400996h

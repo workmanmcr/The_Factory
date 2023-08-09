@@ -1,0 +1,28 @@
+@{
+  Layout="_Layout";
+}
+@model Factory.Models.Machine
+<div class="headder">
+  <div class="jumbotron text-center">
+    <h1>Factory Control</h1>
+    <h3>Assign an Engineer to @Html.DisplayFor(model => model.Name)</h3>
+  </div>
+  <nav class="navbar sticky-top navbar-expand-sm">
+    <div class="container"></div>
+      <p class="btn">@Html.ActionLink("View Engineers", "Index", "Engineers")</p>
+      <p class="btn">@Html.ActionLink("View Machines", "Index", "Machines")</p>
+    </div>
+  </nav>
+</div>
+<br />
+<div class="container">
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.MachineId)
+    
+    @Html.Label("Select an Engineer: ")
+    @Html.DropDownList("EngineerId")
+    
+    <button type="submit">Add Engineer</button>
+  }
+</div>

@@ -1,0 +1,29 @@
+@{
+  Layout ="_Layout";
+}
+@model Factory.Models.Engineer;
+<div class="headder">
+  <div class="jumbotron text-center">
+    <h1>Factory Control</h1>
+    <h2>Machines</h2>
+  </div>
+  <nav class="navbar sticky-top navbar-expand-sm">
+    <div class="container">
+      <p class="btn">@Html.ActionLink("Add Machine", "Create", "Machines")</p>
+      <p class="btn">@Html.ActionLink("View Engineers", "Index", "Engineers")</p>
+      <p class="btn">@Html.ActionLink("Home", "Index", "Home")</p>
+    </div>
+  </nav>
+</div>
+<br />
+<div class="container">
+    @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.EngineerId)
+    
+    @Html.Label("Add new machine assignment  ")
+    @Html.DropDownList("MachineId")
+    <br/>
+    <button type="Save">Add Machine Assignment</button>
+  }
+</div>
